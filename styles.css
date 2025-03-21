@@ -1,0 +1,64 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Courier New', Courier, monospace;
+    color: white;
+}
+
+.container {
+    text-align: center;
+    font-size: 60px;
+}
+
+.text {
+    font-size: 60px;
+    display: inline-block;
+    border-right: 3px solid white;  /* Simulating the cursor */
+    padding-right: 5px;
+    animation: typing 3s steps(10) 1s, backspace 3s steps(10) 4s, blink 0.7s step-end infinite;
+}
+
+@keyframes typing {
+    0% {
+        content: '';
+    }
+    25% {
+        content: 'I';
+    }
+    50% {
+        content: 'I ';
+    }
+    75% {
+        content: 'I l';
+    }
+    100% {
+        content: 'I love you';
+    }
+}
+
+@keyframes backspace {
+    0% {
+        content: 'I love you';
+    }
+    50% {
+        content: 'I love yo';
+    }
+    100% {
+        content: 'I love';
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
